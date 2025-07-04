@@ -1,0 +1,34 @@
+// Prisma schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String
+  password  String
+  createdAt DateTime @default(now())
+}
+
+model Device {
+  id             Int      @id @default(autoincrement())
+  ip             String
+  name           String
+  site           String
+  rack           String?
+  rackUnit       String?
+  serial         String?
+  deviceType     String
+  deviceFunction String
+  model          String?
+  version        String?
+  installDate    DateTime?
+  createdAt      DateTime @default(now())
+}
