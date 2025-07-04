@@ -25,3 +25,18 @@ autenticarse exitosamente el usuario es redirigido a la página `/dashboard`.
 
 El directorio `sdn/` contiene un script de ejemplo `controller.py` donde se
 podría implementar la lógica para gestionar configuraciones en equipos de red.
+
+## Dashboard e Inventario
+
+Al iniciar sesión se accede al `/dashboard`, que ahora presenta un sidebar con
+la opción **Inventario**. Dicha sección permite agregar, editar o eliminar
+equipos en una tabla local. El formulario de ingreso incluye:
+
+- IP de gestión
+- Nombre del equipo
+- Sitio y rack (con unidad de rack)
+- Número de serie
+- Tipo de dispositivo y función (core, distribución o acceso)
+- Datos adicionales como modelo, versión y fecha de instalación
+
+Estos datos pueden ampliarse según las necesidades de la red.
